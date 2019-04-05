@@ -36,6 +36,7 @@ const initialState = {
   ],
   totalPrice: 0,
   addedProducts: []
+
 }
 
 const productReducer = (state = initialState, action) => {
@@ -43,6 +44,8 @@ const productReducer = (state = initialState, action) => {
     case ADD_PRODUCT:
       let addedProduct = state.products.find(item => item.id === action.id);
       let existedProduct = state.addedProducts.find(item => action.id === item.id);
+      console.log('existedProduct', existedProduct);
+
       let productPrice = trasnformStringToNumber(addedProduct.price);
 
       if (existedProduct) {

@@ -7,11 +7,11 @@ test('should test default state', () => {
 });
 
 test('should add a product by id', () => {
+
   const action = {
     type: 'ADD_PRODUCT',
-    id: products[0].id
+    id: products[1].id
   }
-  const state = productReducer(products, action);
-  console.log('state', products[0].id)
-  expect(state).toEqual([products[1], products[2], products[3], products[4]]);
+  const state = productReducer({ products: products, addedProducts: [products[1]], totalPrice: 0 }, action);
+  expect(state).toEqual({ products: [...products], addedProducts: [products[1]], totalPrice: 49.50 });
 });

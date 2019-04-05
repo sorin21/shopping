@@ -1,0 +1,32 @@
+.MyCart {
+  width: 250px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 16px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 2px #ccc;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.OrderNow {
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
+
+.OrderNow button {
+  padding: 10px 20px;
+  background-color: lightseagreen;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: .3s ease-in-out;
+}
+
+.OrderNow button:hover {
+  transform: scale(1.2);
+}
